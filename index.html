@@ -1,74 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Ddp : Doodlepie" />
+<title>Doodle Pie</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon" href="apple-touch-icon-57x57-precomposed.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-startup-image" href="/startup.png">
 
-    <title>Ddp</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/switer/ddp">View on GitHub</a>
-
-          <h1 id="project_title">Ddp</h1>
-          <h2 id="project_tagline">Doodlepie</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/switer/ddp/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/switer/ddp/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+<meta name="msapplication-navbutton-color" content="yellow"/>  
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/part3.css" />
+<link rel="stylesheet" type="text/css" href="css/modules.css" />
+<style type="text/css">
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="title"></div>
+        <div id="drawShape"></div>
+        <div id="drawPicture"></div>
+        <div id="solo"></div>
+        <div id="blackboardCanvas"></div>
+        <div id="game"></div>
+        <div id="painting"></div>
+        <div id="kaleidoscope"></div>
+        <div id="magicType"></div>
+        <div id="brushSize"></div>
+        <div id="undoModule">
+            <div id="undo"></div>
+            <div id="reset"></div>
+        </div>
+        <div id="home"></div>
+        <ul id="crayons">
+            <li id="cffcd9a" class="selected"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="cfc0400"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="cff852e"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="cfec900"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="cd1f800"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="c47d329"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="c29d4a3"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="c29b0d2"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="c2859cf"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="c986ad7"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="cc7bbbb"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="c000000"><div class="pen-bg"></div><div class="pen-head"></div></li>
+            <li id="cffffff"><div class="pen-bg"></div><div class="pen-head"></div></li>
+        </ul>
+        <ul id="chalk" style="display: none;">
+            <li id="bdfdfdf" class="selected"></li>
+            <li id="b96d0d1"></li>
+            <li id="ba4efbc"></li>
+            <li id="bf1e08f"></li>
+            <li id="bf87cd6"></li>
+            <li id="bff7863"></li>
+        </ul>
+        <ul id="stamps">
+            <li id="ball"></li>
+            <li id="flower"></li>
+            <li id="heart"></li>
+            <li id="music"></li>
+            <li id="star"></li>
+        </ul>
+        <div id="pieMenu">
+            <div id="soloBtn"></div>
+            <div id="guess"></div>
+            <div id="fill"></div>
+            <div id="blackboard"></div>
+            <div id="magic"></div>
+            <div id="pie"></div>
+        </div>
+        <div id="info">
+            <div id="help"></div>
+            <div id="finish"></div>
+            <div id="state" class="rc shadow" style="display: none;">
+                <div id="stateContent" class="rc content">
+                    <h1 id="level" class="webfont"></h1>
+                    <ul id="tasks" class="webfont">
+                    </ul>
+                </div>
+                <a id="infoBtn" href="http://weibo.com/u/2787987584" target="_blank"></a>
+                <div class="closeBtn"></div>
+            </div>
+            <div id="check" class="rc shadow" style="display: none;">
+                <div id="checkContent" class="rc content">
+                    <div id="main">
+                        <h1 class="webfont">Bingo! Checked!</h1>
+                        <p id="tips" class="webfont">Just share your work with your friends!<p>
+                    </div>
+                    <div id="share">
+                        <ul>
+                            <li id="sinaLi"></li>
+                            <li>
+                                <div id="qqwb_share__" data-appkey="801179439" data-icon="0" data-counter="0" data-counter_pos="top" data-content="替换此处为要转播的内容" data-pic="替换为图片列表，多个以|隔开"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="closeBtn"></div>
+            </div>
+        </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Ddp maintained by <a href="https://github.com/switer">switer</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+    <script type="text/javascript" src="scripts/jquery/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="scripts/dollar.js"></script>
+    <script type="text/javascript" src="scripts/PieCanvas.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/core.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/sandbox.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/container.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/tools.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/pieMenu.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/drawShape.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/solo.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/painting.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/drawPicture.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/blackboard.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/game.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/kaleidoscope.js"></script>
+    <script type="text/javascript" src="scripts/sandbox/info.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
 </html>

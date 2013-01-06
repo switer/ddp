@@ -1,0 +1,354 @@
+ul {
+    list-style: none;
+}
+
+#title {
+    background-image: url(../images/title.png);    
+    width: 650px;
+    height: 105px;
+    position: absolute;
+    top: -14px;
+    left: 200px;
+}
+
+#container {
+    margin-top: -384px;
+    margin-left: -512px;
+    width: 1024px;
+    height: 768px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    cursor: crosshair;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+
+.disable {
+    -webkit-filter: grayscale(100%);
+}
+
+#pie {
+    z-index: 10;
+    position: absolute;
+    background-image: url(../images/pie.png);
+    top: 580px;
+    left: 710px;
+    width: 317px;
+    height: 200px;
+}
+
+#soloBtn {
+    z-index: 1000;
+    position: absolute;
+    background-image: url(../images/menu/solo.png);
+    left: 573px;
+    top: 682px;
+    width: 126px;
+    height: 86px;
+}
+
+#guess {
+    z-index: 1000;
+    position: absolute;
+    background-image: url(../images/menu/guess.png);
+    left: 600px;
+    top: 577px;
+    width: 110px;
+    height: 99px;
+}
+
+#fill {
+    z-index: 1000;
+    position: absolute;
+    background-image: url(../images/menu/fill.png);
+    left: 704px;
+    top: 518px;
+    width: 103px;
+    height: 105px;
+}
+
+#blackboard {
+    z-index: 1000;
+    position: absolute;
+    background-image: url(../images/menu/blackboard.png);
+    left: 803px;
+    top: 481px;
+    width: 110px;
+    height: 118px;
+}
+
+#magic {
+    z-index: 1000;
+    position: absolute;
+    background-image: url(../images/menu/magic.png);
+    left: 922px;
+    top: 503px;
+    width: 101px;
+    height: 100px;
+}
+
+#home {
+    position: absolute;
+    width: 114px;
+    height: 106px;
+    left: 905px;
+    top: 1px;
+    background-image: url(../images/home.png);
+}
+
+.frontCanvas {
+    position: absolute;
+    left: 132px;
+    top: 118px;
+    z-index: 2;
+}
+
+.backCanvas {
+    position: absolute;
+    left: 132px;
+    top: 118px;
+    -webkit-box-shadow: -10px -10px 10px gray;
+    -moz-box-shadow: -10px -10px 10px gray;
+    -ms-box-shadow: -10px -10px 10px gray;
+    background-color: #FFF;
+    border-bottom: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    z-index: 1;
+}
+#blackboardCanvas .backCanvas {
+    position: absolute;
+    left: 132px;
+    top: 118px;
+    -webkit-box-shadow: none;
+    background: none;
+    z-index: 1;
+}
+
+.brushSize {
+    position: absolute;
+    width: 222px;
+    height: 75px;
+    left: 0px;
+    top: 690px;
+    z-index: 3;
+}
+
+    .brushSize .brush {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 15px;
+    }
+
+.blackboard {
+    background-image: url(../images/blackboard/blackboard-bg.jpg);
+}
+
+.normal {
+    background: url(../images/bg-repeat-x.png) repeat-x;
+}
+
+#help {
+    position: absolute;
+    top: 110px;
+    right: 9px;
+    width: 114px;
+    height: 106px;
+    background-image: url(../images/help.png);
+    z-index: 4;
+}
+
+#finish {
+    position: absolute;
+    top: 220px;
+    right: 9px;
+    width: 114px;
+    height: 106px;
+    background-image: url(../images/finish.png);
+    z-index: 4;
+}
+
+.sd {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1024px;
+    height: 768px;
+    background-color: gray;
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    filter:alpha(opacity=7);
+    z-index: 5;
+}
+
+@-webkit-keyframes popup {
+    0% {
+        width: 0px;
+        height: 0px;
+        top: 384px;
+        left: 512px;
+    }
+    100% {
+        width: 400px;
+        height: 300px;
+        top: 234px;
+        left: 312px;
+    }
+}
+
+#popup {
+    position: absolute;
+    top: 234px;
+    left: 312px;
+    width: 400px;
+    height: 300px;
+    background: url(../images/pop-bg.png) repeat;
+    z-index: 6;
+    -webkit-animation-name: popup;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+}
+
+.rc {
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+}
+.shadow {
+    -moz-box-shadow: 10px 10px 10px gray;
+    -o-box-shadow: 10px 10px 10px gray;
+    -webkit-box-shadow: 10px 10px 10px gray;
+    -ms-box-shadow: 10px 10px 10px gray;
+}
+
+#pop-content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 374px;
+    height: 274px;
+    border: 3px dashed #b79770;
+}
+
+#check {
+    position: absolute;
+    top: 234px;
+    left: 312px;
+    width: 400px;
+    height: 300px;
+    background: url(../images/pop-bg.png) repeat;
+    z-index: 6;
+}
+#state {
+    position: absolute;
+    top: 234px;
+    left: 312px;
+    width: 400px;
+    height: 300px;
+    background: url(../images/pop-bg.png) repeat;
+    z-index: 6;
+}
+.content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 374px;
+    height: 274px;
+    border: 3px dashed #b79770;
+    text-align: center;
+}
+.closeBtn {
+    margin: 0;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-image: url(../images/close.png);
+    width: 40px;
+    height: 40px;
+    z-index: 6;
+}
+#infoBtn {
+    background-image: url(../images/info.png);
+    width: 86px;
+    height: 77px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 6;
+}
+#checkContent #main {
+    width: 370px;
+    height: 150px;
+}
+#checkContent #main {
+    text-align: center;
+}
+
+#share ul {
+    position: absolute;
+    top: 220px;
+    left: 170px;
+}
+    #share ul li {
+        float: left;
+        margin-left: 20px;
+    }
+
+        #sina {
+            background-image: url(../images/sina.png);
+            width: 32px;
+            height: 32px;
+            display: block;
+        }
+        #email {
+            background-image: url(../images/email.png);
+            width: 32px;
+            height: 32px;
+            display: block;
+        }
+        #tencent {
+            background-image: url(../images/t.png);
+            width: 32px;
+            height: 32px;
+            display: block;
+        }
+
+@font-face {
+    font-family: WebFont;
+    src: url(../font/MarkerFeltWide.ttf) format("truetype");
+    font-weight: normal;
+}
+
+.webfont {
+    font-family: WebFont;
+}
+
+#state #level {
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+#state #tasks {
+    text-align: left;
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 40px;
+}
+
+#check #tips {
+    font-size: 25px;
+}
+
+.WB_publishBox {
+    z-index: 10;
+}
